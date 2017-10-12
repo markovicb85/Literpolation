@@ -22,4 +22,9 @@
     <string name="x3"> </string>
     <string name="y3"> </string>
     <string name="clr_btn">Clear</string>
+    <string name="x1_hint">x1</string>
+    <string name="y1_hint">y1</string>
+    <string name="x_hint">x</string>
+    <string name="x2_hint">x2</string>
+    <string name="y2_hint">y2</string>
 </resources>

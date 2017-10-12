@@ -11,98 +11,134 @@
 
     <RelativeLayout
         android:layout_width="0dp"
-        android:layout_weight="0.4"
         android:layout_height="match_parent"
-        android:layout_margin="15dp">
+        android:layout_margin="15dp"
+        android:layout_weight="0.4">
 
         <TextView
             android:id="@+id/naslov"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:gravity="center_vertical"
-            android:text="@string/literpolation"
-            android:textSize="30sp"
             android:layout_alignParentStart="true"
-            android:layout_margin="15dp"/>
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="@string/literpolation"
+            android:textSize="30sp" />
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/naslov"
+            android:layout_marginTop="14dp"
             android:columnCount="2"
-            android:rowCount="4"
-            android:layout_below="@id/naslov">
-
-            <Button
-                android:id="@+id/btn_x1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_columnWeight="1"
-                android:layout_row="0"
-                android:hint="x1"
-                android:text="@string/x1" />
-
-            <Button
-                android:id="@+id/btn_y1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:layout_row="0"
-                android:hint="y1"
-                android:text="@string/y1" />
-
-            <Button
-                android:id="@+id/btn_x2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_column="0"
-                android:layout_columnWeight="1"
-                android:layout_row="1"
-                android:hint="x"
-                android:text="@string/x1" />
+            android:rowCount="4">
 
             <TextView
-                android:id="@+id/btn_y2"
-                android:layout_width="0dp"
-                android:layout_column="1"
-                android:layout_columnWeight="1"
-                android:gravity="center_vertical"
-                android:layout_row="1"
-                android:text="@string/y2"
-                android:background="#ffffff"
-                android:layout_height="34dp" />
-
-            <Button
-                android:id="@+id/btn_x3"
+                android:id="@+id/et_x1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_columnWeight="1"
-                android:layout_row="2"
-                android:hint="x2"
-                android:text="@string/x3" />
+                android:layout_margin="7dp"
+                android:layout_row="0"
+                android:gravity="center"
+                android:hint="@string/x1_hint"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="@string/x1"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/btn_y3"
+            <TextView
+                android:id="@+id/et_y1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:layout_columnWeight="1"
+                android:layout_margin="7dp"
+                android:layout_row="0"
+                android:gravity="center"
+                android:hint="@string/y1_hint"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="@string/y1"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/et_x2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="7dp"
+                android:layout_row="1"
+                android:gravity="center"
+                android:hint="@string/x_hint"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="@string/x1"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/et_y2"
+                android:layout_width="0dp"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="7dp"
+                android:layout_row="1"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="@string/y2"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/et_x3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_margin="7dp"
                 android:layout_row="2"
-                android:hint="y2"
-                android:text="@string/y3" />
+                android:gravity="center"
+                android:hint="@string/x2_hint"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="@string/x3"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/et_y3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="7dp"
+                android:layout_row="2"
+                android:gravity="center"
+                android:hint="@string/y2_hint"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="@string/y3"
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/btn_clrAll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="3"
-                android:layout_gravity="center_horizontal"
                 android:layout_columnSpan="2"
-                android:text="@string/clr_btn"
-                android:layout_marginTop="10dp"/>
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_row="3"
+                android:onClick="onClickClearAll"
+                android:text="@string/clr_btn" />
 
 
         </GridLayout>
@@ -113,17 +149,19 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.6"
-        android:layout_margin="15dp">
+        android:layout_margin="15dp"
+        android:layout_weight="0.6">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_margin="16dp"
             android:background="#ffffff"
             android:gravity="end"
+            android:maxLines="1"
             android:padding="15dp"
             android:text="@string/zero"
             android:textSize="40sp" />
@@ -143,6 +181,9 @@
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+
                     android:columnCount="3"
                     android:rowCount="4">
 
@@ -153,6 +194,7 @@
                         android:layout_column="0"
                         android:layout_columnWeight="1"
                         android:layout_row="0"
+                        android:onClick="onClickNumber"
                         android:text="@string/seven" />
 
                     <Button
@@ -162,6 +204,7 @@
                         android:layout_column="1"
                         android:layout_columnWeight="1"
                         android:layout_row="0"
+                        android:onClick="onClickNumber"
                         android:text="@string/eight" />
 
                     <Button
@@ -171,6 +214,7 @@
                         android:layout_column="2"
                         android:layout_columnWeight="1"
                         android:layout_row="0"
+                        android:onClick="onClickNumber"
                         android:text="@string/nine" />
 
                     <Button
@@ -180,6 +224,7 @@
                         android:layout_column="0"
                         android:layout_columnWeight="1"
                         android:layout_row="1"
+                        android:onClick="onClickNumber"
                         android:text="@string/four" />
 
                     <Button
@@ -189,6 +234,7 @@
                         android:layout_column="1"
                         android:layout_columnWeight="1"
                         android:layout_row="1"
+                        android:onClick="onClickNumber"
                         android:text="@string/five" />
 
                     <Button
@@ -198,6 +244,7 @@
                         android:layout_column="2"
                         android:layout_columnWeight="1"
                         android:layout_row="1"
+                        android:onClick="onClickNumber"
                         android:text="@string/six" />
 
                     <Button
@@ -207,6 +254,7 @@
                         android:layout_column="0"
                         android:layout_columnWeight="1"
                         android:layout_row="2"
+                        android:onClick="onClickNumber"
                         android:text="@string/one" />
 
                     <Button
@@ -216,6 +264,7 @@
                         android:layout_column="1"
                         android:layout_columnWeight="1"
                         android:layout_row="2"
+                        android:onClick="onClickNumber"
                         android:text="@string/two" />
 
                     <Button
@@ -225,6 +274,7 @@
                         android:layout_column="2"
                         android:layout_columnWeight="1"
                         android:layout_row="2"
+                        android:onClick="onClickNumber"
                         android:text="@string/three" />
 
                     <Button
@@ -235,6 +285,7 @@
                         android:layout_columnSpan="2"
                         android:layout_columnWeight="1"
                         android:layout_row="3"
+                        android:onClick="onClickNumber"
                         android:text="@string/zero_btn" />
 
                     <Button
@@ -244,6 +295,7 @@
                         android:layout_column="2"
                         android:layout_columnWeight="1"
                         android:layout_row="3"
+                        android:onClick="onClickNumber"
                         android:text="@string/comma" />
 
                 </GridLayout>
@@ -264,20 +316,22 @@
                     <Button
                         android:id="@+id/btn_clr"
                         android:layout_width="0dp"
+                        android:layout_height="97dp"
                         android:layout_column="0"
                         android:layout_columnWeight="1"
                         android:layout_row="0"
-                        android:text="@string/clear"
-                        android:layout_height="97dp" />
+                        android:onClick="onClickClear"
+                        android:text="@string/clear" />
 
                     <Button
                         android:id="@+id/btn_eq"
                         android:layout_width="0dp"
+                        android:layout_height="97dp"
                         android:layout_column="0"
                         android:layout_columnWeight="1"
                         android:layout_row="1"
-                        android:text="@string/equal"
-                        android:layout_height="97dp" />
+                        android:onClick="onClickEqual"
+                        android:text="@string/equal" />
 
                 </GridLayout>
 
