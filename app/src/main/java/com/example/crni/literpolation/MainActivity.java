@@ -12,6 +12,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView display;
     private TextView x1, x, x2;
     private TextView y1, y, y2;
+    private int position = 0;
+    private double result;
+    private double x_0, x_1, x_2;
+    private double y_1, y_2;
 
 
     @Override
@@ -27,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         y2 = (TextView) findViewById(R.id.et_y3);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     public void onClickNumber(View v){
         Button b = (Button) v;
         number += b.getText();
@@ -38,18 +47,67 @@ public class MainActivity extends AppCompatActivity {
         display.setText(number);
     }
 
+    private void clearDisplay(){
+        number = "";
+        display.setText("0");
+    }
+
     public void onClickClear(View v){
         if(number.length() > 1){
             number = number.substring(0, number.length() - 1);
             updateDisplay();
         }else{
-            number = "";
-            display.setText("0");
+            clearDisplay();
         }
     }
 
     public void onClickEqual(View v){
-        x1.setText(number);
+        if(number.equals("") || number.equals(".") || number.equals("-")){
+            number = "0";
+        }
+        switch (position){
+            case 0:
+                x1.setText(number);
+                x_1 = Double.parseDouble(number);
+                clearDisplay();
+                position = 1;
+                break;
+            case 1:
+                x.setText(number);
+                x_0 = Double.parseDouble(number);
+                clearDisplay();
+                position = 2;
+                break;
+            case 2:
+                x2.setText(number);
+                x_2 = Double.parseDouble(number);
+                clearDisplay();
+                position = 3;
+                break;
+            case 3:
+                y1.setText(number);
+                y_1 = Double.parseDouble(number);
+                clearDisplay();
+                position = 4;
+                break;
+            case 4:
+                y2.setText(number);
+                y_2 = Double.parseDouble(number);
+                clearDisplay();
+                position = 5;
+                break;
+            default:
+                result = calculation();
+                y.setText(Double.toString(result));
+                position = 0;
+                break;
+        }
+
+    }
+
+    private double calculation() {
+        result = y_1 - (x_1-x_0)*(y_1-y_2)/(x_1-x_2);
+        return result;
     }
 
     public void onClickClearAll(View v){
@@ -61,5 +119,6 @@ public class MainActivity extends AppCompatActivity {
         y2.setText(null);
         display.setText("0");
         number = "";
+        position = 0;
     }
 }

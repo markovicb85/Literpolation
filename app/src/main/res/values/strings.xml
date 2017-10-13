@@ -11,7 +11,7 @@
     <string name="nine">9</string>
     <string name="four">4</string>
     <string name="zero_btn">0</string>
-    <string name="comma">,</string>
+    <string name="dot">.</string>
     <string name="clear">clr</string>
     <string name="equal">=</string>
     <string name="literpolation">Literpolation</string>
@@ -27,4 +27,5 @@
     <string name="x_hint">x</string>
     <string name="x2_hint">x2</string>
     <string name="y2_hint">y2</string>
+    <string name="minus">-</string>
 </resources>
