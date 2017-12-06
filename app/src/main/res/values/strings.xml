@@ -25,6 +25,7 @@
     <string name="x1_hint">x1</string>
     <string name="y1_hint">y1</string>
     <string name="x_hint">x</string>
+    <string name="y_hint">"?"</string>
     <string name="x2_hint">x2</string>
     <string name="y2_hint">y2</string>
     <string name="minus">-</string>

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Literpolation.iml" filepath="$PROJECT_DIR$/Literpolation.iml" />
+      <module fileurl="file://C:\Users\Crni\AndroidStudioProjects\Literpolation\Literpolation.iml" filepath="C:\Users\Crni\AndroidStudioProjects\Literpolation\Literpolation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Crni\AndroidStudioProjects\Literpolation\app\app.iml" filepath="C:\Users\Crni\AndroidStudioProjects\Literpolation\app\app.iml" />
     </modules>
   </component>
 </project>
