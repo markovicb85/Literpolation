@@ -15,12 +15,12 @@
     <string name="clear">clr</string>
     <string name="equal">=</string>
     <string name="literpolation">Literpolation</string>
-    <string name="x1"> </string>
-    <string name="x2"> </string>
-    <string name="y1"> </string>
-    <string name="y2"> </string>
-    <string name="x3"> </string>
-    <string name="y3"> </string>
+    <string name="x1">x1</string>
+    <string name="x2">x2</string>
+    <string name="y1">x3</string>
+    <string name="y2">y1</string>
+    <string name="x3">y2</string>
+    <string name="y3">y3</string>
     <string name="clr_btn">Clear</string>
     <string name="x1_hint">x1</string>
     <string name="y1_hint">y1</string>

@@ -2,6 +2,7 @@ package com.example.crni.literpolation;
 
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -14,7 +15,7 @@ public class MainActivity extends Activity {
     private TextView display;
     private TextView x1, x, x2;
     private TextView y1, y, y2;
-    private int position = 0;
+    private String position = "x1";
     private double result;
     private double x_0, x_1, x_2;
     private double y_1, y_2;
@@ -42,12 +43,15 @@ public class MainActivity extends Activity {
 
     public void onClickNumber(View v){
         Button b = (Button) v;
-        number += b.getText();
-        updateDisplay();
-
+        if(b.getText().equals("-") && number.length() > 0){
+            //Ne radi nista
+        }else{
+            number += b.getText();
+            updateDisplay(number);
+        }
     }
 
-    private void updateDisplay() {
+    private void updateDisplay(String number) {
         display.setText(number);
     }
 
@@ -59,7 +63,7 @@ public class MainActivity extends Activity {
     public void onClickClear(View v){
         if(number.length() > 1){
             number = number.substring(0, number.length() - 1);
-            updateDisplay();
+            updateDisplay(number);
         }else{
             clearDisplay();
         }
@@ -70,43 +74,57 @@ public class MainActivity extends Activity {
             number = "0";
         }
         switch (position){
-            case 0:
+            case "x1":
                 x1.setText(number);
+                x1.setTextColor(Color.BLACK);
                 x_1 = Double.parseDouble(number);
                 clearDisplay();
-                position = 1;
+                position = "x2";
                 break;
-            case 1:
+            case "x2":
                 x.setText(number);
+                x.setTextColor(Color.BLACK);
                 x_0 = Double.parseDouble(number);
                 clearDisplay();
-                position = 2;
+                position = "x3";
                 break;
-            case 2:
+            case "x3":
                 x2.setText(number);
+                x2.setTextColor(Color.BLACK);
                 x_2 = Double.parseDouble(number);
                 clearDisplay();
-                position = 3;
+                position = "y1";
                 break;
-            case 3:
+            case "y1":
                 y1.setText(number);
+                y1.setTextColor(Color.BLACK);
                 y_1 = Double.parseDouble(number);
                 clearDisplay();
-                position = 4;
+                position = "y2";
                 break;
-            case 4:
+            case "y2":
                 y2.setText(number);
+                y2.setTextColor(Color.BLACK);
                 y_2 = Double.parseDouble(number);
                 clearDisplay();
-                position = 5;
+                position = "y3";
                 break;
             default:
                 result = calculation();
+                y.setTextColor(Color.BLACK);
                 y.setText(Double.toString(result));
-                position = 0;
+                position = "x1";
                 break;
         }
 
+    }
+
+    public void onClickSelect(View v){
+        TextView tv= (TextView) v;
+        number = (String) tv.getText();
+        updateDisplay(number);
+        tv.setTextColor(Color.RED);
+        position = (String) tv.getTag();
     }
 
     private double calculation() {
@@ -123,6 +141,6 @@ public class MainActivity extends Activity {
         y2.setText(null);
         display.setText("0");
         number = "";
-        position = 0;
+        position = "x1";
     }
 }
