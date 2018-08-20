@@ -15,12 +15,13 @@
     <string name="clear">clr</string>
     <string name="equal">=</string>
     <string name="literpolation">Literpolation</string>
-    <string name="x1">x1</string>
-    <string name="x2">x2</string>
-    <string name="y1">x3</string>
-    <string name="y2">y1</string>
-    <string name="x3">y2</string>
-    <string name="y3">y3</string>
+    <string name="dialog_name">Interpolation result</string>
+    <string name="x1">1</string>
+    <string name="x2">2</string>
+    <string name="y1">4</string>
+    <string name="y2">6</string>
+    <string name="x3">3</string>
+    <string name="y3">5</string>
     <string name="clr_btn">Clear</string>
     <string name="x1_hint">x1</string>
     <string name="y1_hint">y1</string>
@@ -29,4 +30,10 @@
     <string name="x2_hint">x2</string>
     <string name="y2_hint">y2</string>
     <string name="minus">-</string>
+    <string name="x1_label">X1 =</string>
+    <string name="y1_label">Y1 =</string>
+    <string name="x2_label">X2 =</string>
+    <string name="y2_label">Y2 =</string>
+    <string name="x3_label">X3 =</string>
+    <string name="y3_label">Y3 =</string>
 </resources>
